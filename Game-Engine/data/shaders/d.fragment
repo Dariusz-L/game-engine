@@ -1,0 +1,26 @@
+#version 330 core
+
+in vec2 TexCoords;
+in vec3 Normal;
+in vec3 FragPos;
+
+uniform sampler2D texDiffuse;
+
+uniform vec3 lightPos;
+uniform vec3 lightColor;
+uniform float ambientStrength;
+
+void main()
+{
+	// AMBIENT
+	vec3 ambient = ambientStrength * vec3(texture2D(texDiffuse, TexCoords)) * lightColor;
+
+	// DIFFUSE
+	vec3 lightDir = normalize(lightPos - FragPos);
+	vec3 diffuse = vec3(max(dot(Normal, lightDir), 0) * texture2D(texDiffuse, TexCoords)) * lightColor;
+	
+	// FINAL
+	vec3 result = vec3(ambient + diffuse);
+
+	gl_FragColor = vec4(result, 1.0);
+}

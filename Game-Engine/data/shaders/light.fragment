@@ -1,0 +1,13 @@
+#version 330 core
+
+uniform vec3 lightColor;
+
+void main()
+{
+	vec4 result = vec4(lightColor, 1.0);
+
+	if (result.w < 0.01)
+		discard;
+
+	gl_FragColor = result;
+}

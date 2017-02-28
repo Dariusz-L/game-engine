@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15DF1301-0B75-45B3-9822-C024301178CA}</ProjectGuid>
+    <RootNamespace>GameEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)Libs\glm;$(ProjectDir)Libs\glew\include;$(ProjectDir)Libs\SDL2_image\include;$(ProjectDir)Libs\SDL2\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(ProjectDir)Libs\glew\lib\Win32;$(ProjectDir)Libs\SDL2_image\lib\x86;$(ProjectDir)Libs\SDL2\lib\x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;SDL2_image.lib;SDL2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Core\IManager.h" />
+    <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Engine\Events\EventManager.h" />
+    <ClInclude Include="Engine\Events\IEventHandler.h" />
+    <ClInclude Include="Engine\Input\StandardInputController.h" />
+    <ClInclude Include="Engine\Loader\FileLoader.h" />
+    <ClInclude Include="Engine\Loader\ObjLoader\ObjLoader.h" />
+    <ClInclude Include="Engine\Rendering\RenderingHelper.h" />
+    <ClInclude Include="Engine\Resources\ResourceInfo.h" />
+    <ClInclude Include="Engine\Resources\ResourceManager.h" />
+    <ClInclude Include="Engine\System\Config\Include\IncludeAssimp.h" />
+    <ClInclude Include="Engine\System\Config\Include\IncludeGLM.h" />
+    <ClInclude Include="Engine\System\Config\Include\IncludeOpenGL.h" />
+    <ClInclude Include="Engine\System\Config\Include\IncludeSDL.h" />
+    <ClInclude Include="Engine\System\Config\Platform.h" />
+    <ClInclude Include="Engine\System\EngineData.h" />
+    <ClInclude Include="Engine\System\EngineSystem.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Asset.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\AssetLoader.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\AssetParsingManager.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Assets.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\AssetInfo.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\AssetParsed.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\AssetParser.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\AssetToParse.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\Image\ImageAssetParsed.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\Image\ImageAssetParser.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\MTL\MtlAssetParsed.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\MTL\MtlAssetParser.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParsed.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParser.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoaderStructs.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\Shader\ShaderAssetParsed.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\Shader\ShaderAssetParser.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\SpecificAssets.h" />
+    <ClInclude Include="Engine\System\Resource\Component\Component.h" />
+    <ClInclude Include="Engine\System\Resource\Component\ComponentLoader.h" />
+    <ClInclude Include="Engine\System\Resource\Component\ComponentPool.h" />
+    <ClInclude Include="Engine\System\Resource\Component\Components.h" />
+    <ClInclude Include="Engine\System\Resource\GameObject.h" />
+    <ClInclude Include="Engine\System\Resource\Object.h" />
+    <ClInclude Include="Engine\System\Resource\ResourceData.h" />
+    <ClInclude Include="Engine\System\Resource\ResourceLoader.h" />
+    <ClInclude Include="Engine\System\Subsystem\ISubsystem.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Asset\Mesh\Mesh.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Asset\Mesh\ObjModel.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Asset\Mesh\Vertex.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Asset\MtlMaterial.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Asset\Shader.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Asset\Texture.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Component\Camera.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Component\Light.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Component\Material.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Component\Model.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Loader\MaterialLoader.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Loader\MeshLoader.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Loader\ShaderLoader.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Loader\TextureLoader.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\RenderableObjects\MaterialBranch.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\RenderableObjects\MG.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\RenderableObjects\RenderableObjects.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\RenderableObjects\ShaderBranch.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\RenderingConfig.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\RenderingData.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\RenderingSystem.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Utility\Attribute\AttributeInfo.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Utility\Attribute\AttributeLoader.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Utility\DrawingMechanism.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Utility\Drawing\GL3DrawingMechanism.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Utility\Drawing\GLES2DrawingMechanism.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Utility\Uniform\UniformInfo.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Utility\Uniform\UniformLoading.h" />
+    <ClInclude Include="Engine\System\Subsystem\Rendering\Window.h" />
+    <ClInclude Include="Engine\System\Subsystem\Subsystems.h" />
+    <ClInclude Include="Engine\System\Utility\Containers\Pool.h" />
+    <ClInclude Include="Engine\System\Utility\String\StringUtility.h" />
+    <ClInclude Include="Engine\Time\TimeManager.h" />
+    <ClInclude Include="Engine\Time\TimeWatch.h" />
+    <ClInclude Include="Engine\Utils\ParseUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Engine\Events\EventManager.cpp" />
+    <ClCompile Include="Engine\Input\StandardInputController.cpp" />
+    <ClCompile Include="Engine\Loader\FileLoader.cpp" />
+    <ClCompile Include="Engine\Loader\ObjLoader\ObjLoader.cpp" />
+    <ClCompile Include="Engine\Rendering\RenderingHelper.cpp" />
+    <ClCompile Include="Engine\Resources\ResourceManager.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\Asset.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\AssetParsingManager.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\Image\ImageAssetParser.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\MTL\MtlAssetParser.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParser.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\Shader\ShaderAssetParser.cpp" />
+    <ClCompile Include="Engine\System\Resource\Component\Component.cpp" />
+    <ClCompile Include="Engine\System\Resource\GameObject.cpp" />
+    <ClCompile Include="Engine\System\Resource\ResourceLoader.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Asset\Mesh\Mesh.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Asset\Mesh\ObjModel.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Asset\MtlMaterial.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Asset\Shader.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Asset\Texture.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Component\Camera.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Component\Light.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Component\Material.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Component\Model.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Loader\MaterialLoader.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Loader\MeshLoader.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Loader\ShaderLoader.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Loader\TextureLoader.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\RenderingSystem.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Utility\Attribute\AttributeLoader.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Utility\Drawing\GL3DrawingMechanism.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Utility\Drawing\GLES2DrawingMechanism.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Utility\Uniform\UniformLoading.cpp" />
+    <ClCompile Include="Engine\System\Subsystem\Rendering\Window.cpp" />
+    <ClCompile Include="Engine\System\Utility\String\StringUtility.cpp" />
+    <ClCompile Include="Engine\Time\TimeManager.cpp" />
+    <ClCompile Include="Engine\Time\TimeWatch.cpp" />
+    <ClCompile Include="Engine\Utils\ParseUtil.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,26 @@
+#version 330 core
+
+in vec3 Normal;
+in vec3 FragPos;
+
+uniform vec3 lightPos;
+uniform vec3 lightColor;
+
+uniform float ambientStrength;
+uniform vec3 ambientColor;
+uniform vec3 colorDiffuse;
+
+void main()
+{
+	//AMBIENT
+	vec3 ambientColor = ambientColor * ambientStrength;
+	
+	// DIFFUSE
+	vec3 lightDir = normalize(lightPos - FragPos);
+	vec3 diffuse = vec3(max(dot(Normal, lightDir), 0)) * lightColor * colorDiffuse;
+	
+	// FINAL
+	vec3 result = vec3(ambientColor + diffuse);
+
+	gl_FragColor = vec4(result, 1.0);
+}
