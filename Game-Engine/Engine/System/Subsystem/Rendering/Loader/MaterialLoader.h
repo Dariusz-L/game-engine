@@ -2,12 +2,12 @@
 
 #include "..\..\..\Resource\Asset\AssetLoader.h"
 
-class Material;
+class MtlMaterial;
 
-class MaterialLoader : public AssetLoader<Material>
+class MaterialLoader : public AssetLoader<MtlMaterial>
 {
 protected:
-	void Load(Material* asset, AssetParsed* assetParsed) override;
-	void Destroy(Material* asset) override;
+	void Load(MtlMaterial* asset, AssetParsed* assetParsed) override;
+	void Destroy(MtlMaterial* asset) override;
 };
 

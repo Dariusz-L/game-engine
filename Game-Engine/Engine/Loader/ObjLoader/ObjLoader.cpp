@@ -1,8 +1,8 @@
 #include "ObjLoader.h"
 
-#include "..\..\Resources\ResourceManager.h"
 #include "..\..\Engine.h"
 #include "..\..\System\Subsystem\Rendering\Asset\Mesh\Vertex.h"
+#include "..\..\Resources\ResourceManager.h"
 
 bool ObjLoader::SetMaterial(ObjModel* owner, TinyObj::shape_t* shape, std::vector<Material*>* materials) {
 	ResourceManager* rm = Engine::GetManager<ResourceManager>();

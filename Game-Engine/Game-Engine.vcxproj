@@ -145,10 +145,10 @@
     <ClInclude Include="Engine\System\Resource\Asset\Parser\Image\ImageAssetParser.h" />
     <ClInclude Include="Engine\System\Resource\Asset\Parser\MTL\MtlAssetParsed.h" />
     <ClInclude Include="Engine\System\Resource\Asset\Parser\MTL\MtlAssetParser.h" />
-    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParsed.h" />
-    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParser.h" />
-    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.h" />
-    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoaderStructs.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\MeshAssetParsed.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\MeshAssetParser.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParser.h" />
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParserStructs.h" />
     <ClInclude Include="Engine\System\Resource\Asset\Parser\Shader\ShaderAssetParsed.h" />
     <ClInclude Include="Engine\System\Resource\Asset\Parser\Shader\ShaderAssetParser.h" />
     <ClInclude Include="Engine\System\Resource\Asset\SpecificAssets.h" />
@@ -209,8 +209,8 @@
     <ClCompile Include="Engine\System\Resource\Asset\AssetParsingManager.cpp" />
     <ClCompile Include="Engine\System\Resource\Asset\Parser\Image\ImageAssetParser.cpp" />
     <ClCompile Include="Engine\System\Resource\Asset\Parser\MTL\MtlAssetParser.cpp" />
-    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParser.cpp" />
-    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\MeshAssetParser.cpp" />
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParser.cpp" />
     <ClCompile Include="Engine\System\Resource\Asset\Parser\Shader\ShaderAssetParser.cpp" />
     <ClCompile Include="Engine\System\Resource\Component\Component.cpp" />
     <ClCompile Include="Engine\System\Resource\GameObject.cpp" />

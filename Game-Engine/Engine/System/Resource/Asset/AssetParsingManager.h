@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <typeindex>
 
-class ObjAssetParsed;
+class MeshAssetParsed;
 
 using AssetsParsed = std::unordered_map<std::type_index, std::vector<AssetParsed*>*>;
 

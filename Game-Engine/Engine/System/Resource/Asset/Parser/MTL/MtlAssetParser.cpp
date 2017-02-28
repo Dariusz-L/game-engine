@@ -2,10 +2,9 @@
 
 #include "MtlAssetParsed.h"
 #include "..\AssetToParse.h"
-#include "..\OBJ\TinyObj\TinyObjLoader.h"
+#include "..\OBJ\TinyObj\TinyObjParser.h"
 #include "..\..\..\..\..\Loader\FileLoader.h"
 
-#include <map>
 #include <string>
 #include <sstream>
 
@@ -13,10 +12,9 @@ AssetParsed* MtlAssetParser::Parse(AssetToParse* fileToParse) {
 
 	MtlAssetParsed* mtlAssetParsed = new MtlAssetParsed();
 
-	std::map<std::string, int> map;
 	std::stringstream stream(FileLoader::LoadFile(fileToParse->info[0].pathToFile));
 
-	TinyObj::LoadMtl(&map, &mtlAssetParsed->_tMaterials, &stream);
+	TinyObj::LoadMtl(&mtlAssetParsed->map, &mtlAssetParsed->tMaterials, &stream);
 
 	return mtlAssetParsed;
 }

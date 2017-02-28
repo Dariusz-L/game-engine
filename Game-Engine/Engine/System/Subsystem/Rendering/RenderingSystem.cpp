@@ -13,11 +13,17 @@
 
 #include "Loader\TextureLoader.h"
 #include "Loader\ShaderLoader.h"
+#include "Loader\MeshLoader.h"
+#include "Loader\MaterialLoader.h"
 
 #include "..\..\Resource\Asset\Parser\Image\ImageAssetParsed.h"
 #include "..\..\Resource\Asset\Parser\Image\ImageAssetParser.h"
 #include "..\..\Resource\Asset\Parser\Shader\ShaderAssetParsed.h"
 #include "..\..\Resource\Asset\Parser\Shader\ShaderAssetParser.h"
+#include "..\..\Resource\Asset\Parser\OBJ\MeshAssetParsed.h"
+#include "..\..\Resource\Asset\Parser\OBJ\MeshAssetParser.h"
+#include "..\..\Resource\Asset\Parser\MTL\MtlAssetParsed.h"
+#include "..\..\Resource\Asset\Parser\MTL\MtlAssetParser.h"
 
 using namespace Rendering;
 using namespace Rendering::Utility::Uniform;
@@ -32,6 +38,8 @@ RenderingSystem::RenderingSystem() {
 
 	_textureLoader = new TextureLoader();
 	_shaderLoader = new ShaderLoader();
+	_meshLoader = new MeshLoader();
+	_materialLoader = new MaterialLoader();
 }
 
 void RenderingSystem::OnStart() {
@@ -51,7 +59,12 @@ void RenderingSystem::OnStart() {
 
 	assets->emplace(typeid(Shader), 
 		_shaderLoader->LoadAssets((*assetsParsed)[typeid(ShaderAssetParser)]));
-	//_textureLoader->DestroyAssets(a);
+	
+	assets->emplace(typeid(MtlMaterial),
+		_materialLoader->LoadAssets((*assetsParsed)[typeid(MtlAssetParser)]));
+
+	assets->emplace(typeid(ObjModel),
+		_meshLoader->LoadAssets((*assetsParsed)[typeid(MeshAssetParser)]));
 }
 
 void RenderingSystem::Update() {

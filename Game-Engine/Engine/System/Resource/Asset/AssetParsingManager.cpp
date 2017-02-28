@@ -1,7 +1,7 @@
 #include "AssetParsingManager.h"
 
-#include "Parser\OBJ\ObjAssetParser.h"
-#include "Parser\OBJ\ObjAssetParsed.h"
+#include "Parser\OBJ\MeshAssetParser.h"
+#include "Parser\OBJ\MeshAssetParsed.h"
 #include "Parser\Shader\ShaderAssetParser.h"
 #include "Parser\Shader\ShaderAssetParsed.h"
 #include "Parser\Image\ImageAssetParser.h"
@@ -19,7 +19,7 @@ using namespace Utility::String;
 const std::string AssetParsingManager::BASE_PATH("data/");
 
 AssetParsingManager::AssetParsingManager() {
-	_parsers.push_back(new ObjAssetParser());
+	_parsers.push_back(new MeshAssetParser());
 	_parsers.push_back(new ShaderAssetParser());
 	_parsers.push_back(new ImageAssetParser());
 	_parsers.push_back(new MtlAssetParser());
@@ -33,7 +33,7 @@ AssetParsingManager::~AssetParsingManager() {
 
 bool AssetParsingManager::TryParse(const std::string& line) {
 	if (IfContainStr(line, "RObjModels")) {
-		LoadAssets<ObjAssetParser, ObjAssetParsed>("objModels");
+		LoadAssets<MeshAssetParser, MeshAssetParsed>("objModels");
 		return true;
 	}
 

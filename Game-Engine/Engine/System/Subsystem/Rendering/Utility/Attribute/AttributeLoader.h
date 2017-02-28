@@ -10,6 +10,6 @@ class AttributeLoader
 {
 public:
 	
-	virtual void Load(Mesh* mesh, std::vector<GLfloat>* data, std::vector<GLuint>* indices);
+	static void Load(Mesh* mesh, std::vector<GLfloat>* data, std::vector<GLuint>* indices);
 };
 

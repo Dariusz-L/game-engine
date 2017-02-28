@@ -16,7 +16,7 @@ public:
 		auto assets = new SpecificAssets();
 		int size = assetsParsed->size();
 
-		for (int i = 0; i < size - 1; i++) {
+		for (int i = 0; i < size; i++) {
 			auto assetParsed = (*assetsParsed)[i];
 			auto asset = new ASSET_TYPE();
 			asset->SetID(i);

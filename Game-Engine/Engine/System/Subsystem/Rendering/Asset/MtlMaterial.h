@@ -1,6 +1,6 @@
 #pragma once
 #include "..\..\..\Resource\Asset\Asset.h"
-#include "..\..\..\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoaderStructs.h"
+#include "..\..\..\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParserStructs.h"
 
 #include <map>
 #include <unordered_map>
@@ -12,11 +12,11 @@ class MtlMaterial :
 	public Asset
 {
 private:
+
+public:
 	std::map<std::string, int> _materialMap;
 	std::unordered_map<int, Material*> _materials;
 	std::vector<TinyObj::material_t> _tMaterials;
-
-public:
 	MtlMaterial();
 	~MtlMaterial();
 

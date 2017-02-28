@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\..\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.h"
+#include "..\..\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParser.h"
 #include "..\..\System\Config\Include\IncludeOpenGL.h"
 
 #include <vector>

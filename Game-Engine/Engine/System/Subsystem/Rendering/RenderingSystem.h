@@ -7,6 +7,8 @@
 class DrawingMechanism;
 class TextureLoader;
 class ShaderLoader;
+class MeshLoader;
+class MaterialLoader;
 
 namespace Rendering {
 
@@ -23,6 +25,9 @@ namespace Rendering {
 	public:
 		TextureLoader*		_textureLoader;
 		ShaderLoader*		_shaderLoader;
+		MeshLoader*			_meshLoader;
+		MaterialLoader*		_materialLoader;
+
 		RenderingSystem();
 
 		void OnStart()	override;

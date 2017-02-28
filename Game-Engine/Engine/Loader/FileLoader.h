@@ -6,7 +6,7 @@
 #include <utility>
 #include <sstream>
 #include "..\System\Config\Include\IncludeSDL.h"
-#include "..\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.h"
+#include "..\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParser.h"
 
 class ObjModel;
 

@@ -40,12 +40,6 @@ void ResourceManager::Init()
 		vector<string> data = Utility::String::Split(line, '=');
 		if (data.size() == 0) return true;
 
-		// RESOURCES
-		//else if (IfContainStr(data[0], "RTextures"))		InitResources<Texture>(data[1]);
-		else if (IfContainStr(data[0], "RMtlMaterials"))    InitResources<MtlMaterial>(data[1]);
-		//else if (IfContainStr(data[0], "RShaders"))			InitResources<Shader>(data[1], 2);
-		else if (IfContainStr(data[0], "RObjModels"))		InitResources<ObjModel>(data[1]);
-
 		// COMPONENTS
 		else if (IfContainStr(data[0], "CModel"))			InitComponent<Model>(data[1]);
 		else if (IfContainStr(data[0], "CCamera"))			InitComponent<Camera>(data[1]);

@@ -1,5 +1,5 @@
 #include "MtlMaterial.h"
-#include "..\..\..\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.h"
+#include "..\..\..\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParser.h"
 #include "..\..\..\..\Loader\FileLoader.h"
 
 #include "..\..\..\..\Utils\ParseUtil.h"
@@ -8,13 +8,8 @@
 
 #include <stdexcept>
 
-MtlMaterial::MtlMaterial()
-{
-}
-
-MtlMaterial::~MtlMaterial()
-{
-}
+MtlMaterial::MtlMaterial() {}
+MtlMaterial::~MtlMaterial() {}
 
 void MtlMaterial::Load(std::vector<std::string>& filePaths)
 {

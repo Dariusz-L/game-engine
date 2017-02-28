@@ -69,18 +69,6 @@
     <ClInclude Include="Engine\System\Resource\Asset\Parser\MTL\MtlAssetParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoaderStructs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParsed.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\System\Resource\Asset\Parser\Shader\ShaderAssetParsed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -255,6 +243,18 @@
     <ClInclude Include="Engine\Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\MeshAssetParsed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\MeshAssetParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParserStructs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Events\EventManager.cpp">
@@ -279,12 +279,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine\System\Resource\Asset\Parser\MTL\MtlAssetParser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\ObjAssetParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine\System\Resource\Asset\Parser\Shader\ShaderAssetParser.cpp">
@@ -375,6 +369,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\MeshAssetParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\System\Resource\Asset\Parser\OBJ\TinyObj\TinyObjParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
